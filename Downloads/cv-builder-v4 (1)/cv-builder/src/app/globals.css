@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;600;700&family=Noto+Sans+SC:wght@400;700&family=Poppins:wght@400;600;700&family=Lora:wght@400;600;700&family=Source+Serif+4:wght@400;600;700&family=Merriweather:wght@400;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { font-family: "Inter", "Noto Sans Bengali", "Noto Sans SC", system-ui, sans-serif; background: #eef2f6; color: #0f1b2d; }
+:focus-visible { outline: 2px solid #0f766e; outline-offset: 2px; }
+
+.cv-page { width: 794px; min-height: 1123px; background: #fff; color: #111; box-sizing: border-box; }
+
+@media print {
+  @page { size: A4; margin: 0; }
+  body { background: #fff; }
+  .no-print { display: none !important; }
+  .print-root { transform: none !important; width: auto !important; height: auto !important; }
+  .cv-page { box-shadow: none !important; }
+}
+
+@media print {
+  section, li { break-inside: avoid; }
+  h2 { break-after: avoid; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+html { scroll-behavior: smooth; }
